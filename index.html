@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-**************" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+  <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+  <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+  <link rel="stylesheet" href="css/product.css" type="text/css">
+  <title>Classic Solution</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+
+    .header {
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 250px;
+      height: auto;
+    }
+
+    nav {
+      display: flex;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-right: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 768px) {
+      .menu-icon {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #f2f2f2;
+        text-align: center;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      nav a {
+        display: block;
+        padding: 10px;
+      }
+    }
+
+    p {
+      color: #555;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: auto;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .col-2 {
+      flex-basis: 50%;
+      min-width: 50%;
+    }
+
+    .col-2 img {
+      max-width: 100%;
+      padding: 50px 0;
+    }
+
+    .col-2 h1 {
+      font-size: 50px;
+      line-height: 60px;
+      margin: 25px 0;
+      margin-left: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ff523b;
+      color: #ffffff;
+      padding: 8px 30px;
+      margin: 30px 0;
+      border-radius: 30px;
+      transition: background 0.5s;
+    }
+
+    .btn:hover {
+      background: #563434;
+    }
+
+    .header {
+      background: radial-gradient(#fff, #d6ffd7);
+    }
+
+    .header .row {
+      margin-top: 70px;
+    }
+
+    .categories {
+      margin: 70px 0;
+    }
+
+    .col-3 {
+      flex-basis: 30%;
+      min-width: 250px;
+      margin-bottom: 30px;
+    }
+
+    .col-3 img {
+      width: 100%;
+    }
+
+    .small-container {
+      max-width: 1080px;
+      margin: auto;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    .col-4 {
+      flex-basis: 25%;
+      padding: 10px;
+      min-width: 200px;
+      margin-bottom: 50px;
+      transition: transform 0.5s;
+    }
+
+    .col-4 img {
+      width: 100%;
+    }
+
+    .title {
+      text-align: center;
+      margin: 0 auto 80px;
+      position: relative;
+      line-height: 60px;
+      color: #555;
+    }
+
+    .title::after {
+      content: "";
+      background: #ff523b;
+      width: 80px;
+      height: 5px;
+      border-radius: 5px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%);
+    }
+
+    h4 {
+      color: #555;
+      font-weight: normal;
+    }
+
+    .col-4 p {
+      font-size: 14px;
+    }
+
+    .rating .fas {
+      color: #ff523b;
+    }
+
+    .rating .far {
+      color: #ff523b;
+    }
+
+    .col-4:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Offer */
+
+    .offer {
+      background: radial-gradient(#fff, #dcffd6);
+      margin-top: 80px;
+      padding: 30px 0;
+    }
+
+    .col-2 .offer-img {
+      padding: 50px;
+    }
+
+    small {
+      color: #555;
+    }
+
+    .brands {
+      margin: 100px auto;
+    }
+
+    .col-5 {
+      width: 160px;
+    }
+
+    .col-5 img {
+      width: 100%;
+      cursor: pointer;
+      filter: grayscale(100%);
+    }
+
+    .col-5 img:hover {
+      width: 100%;
+      cursor: pointer;
+      filter: grayscale(0);
+    }
+
+    /* footer */
+
+    .footer {
+      background: #F3F6FA;
+      color: #8a8a8a;
+      font-size: 14px;
+      padding: 60px 0 20px;
+    }
+
+    .footer p {
+      color: #8a8a8a;
+    }
+
+    .footer h3 {
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    .footer-col-1,
+    .footer-col-2,
+    .footer-col-3,
+    .footer-col-4 {
+      min-width: 150px;
+      margin-bottom: 20px;
+    }
+
+    .footer-col-1 {
+      flex-basis: 30%;
+    }
+
+    .footer-col-2 {
+      flex: 1;
+      text-align: center;
+    }
+
+    .footer-col-2 img {
+      width: 180px;
+      margin-bottom: 20px;
+    }
+
+    .footer-col-3,
+    .footer-col-4 {
+      flex-basis: 12%;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .app-logo {
+      margin-top: 20px;
+    }
+
+    .app-logo img {
+      width: 140px;
+    }
+
+    .footer hr {
+      border: none;
+      background: #b5b5b5;
+      height: 1px;
+      margin: 20px 0;
+    }
+
+    .copyright {
+      text-align: center;
+    }
+
+    .menu-icon {
+      width: 28px;
+      margin-left: 20px;
+      display: none;
+    }
+
+    /* media query for menu */
+
+    @media only screen and (max-width: 800px) {
+      nav ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+      }
+
+      nav ul li {
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      nav ul li a {
+        color: #fff;
+      }
+
+      .menu-icon {
+        display: block;
+        cursor: pointer;
+      }
+    }
+
+    /* all products page */
+
+    .row-2 {
+      justify-content: space-between;
+      margin: 100px auto 50px;
+    }
+
+    select {
+      border: 1px solid #ff523b;
+      padding: 5px;
+    }
+
+    select:focus {
+      outline: none;
+    }
+
+    .page-btn {
+      margin: 0 auto 80px;
+    }
+
+    .page-btn span {
+      display: inline-block;
+      border: 1px solid #ff523b;
+      margin-left: 10px;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      cursor: pointer;
+    }
+
+    .page-btn span:hover {
+      background: #ff523b;
+      color: #ffffff;
+    }
+
+    /* single product details */
+
+    .single-product {
+      margin-top: 80px;
+    }
+
+    .single-product .col-2 img {
+      padding: 0;
+    }
+
+    .single-product .col-2 {
+      padding: 20px;
+    }
+
+    .single-product h4 {
+      margin: 20px 0;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .single-product select {
+      display: block;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    .single-product input {
+      width: 50px;
+      height: 40px;
+      padding-left: 10px;
+      font-size: 20px;
+      margin-right: 10px;
+      border: 1px solid #ff523b;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    .single-product .fas {
+      color: #ff523b;
+      margin-left: 10px;
+    }
+
+    .small-img-row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .small-img-col {
+      flex-basis: 24%;
+      cursor: pointer;
+    }
+
+    /* cart items */
+
+    .cart-page {
+      margin: 90px auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .cart-info {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    th {
+      text-align: left;
+      padding: 5px;
+      color: #ffffff;
+      background: #ff523b;
+      font-weight: normal;
+    }
+
+    td {
+      padding: 10px 5px;
+    }
+
+    td input {
+      width: 40px;
+      height: 30px;
+      padding: 5px;
+    }
+
+    td a {
+      color: #ff523b;
+      font-size: 12px;
+    }
+
+    td img {
+      width: 80px;
+      height: 80px;
+      margin-right: 10px;
+    }
+
+    .total-price {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .total-price table {
+      border-top: 3px solid #ff523b;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    td:last-child {
+      text-align: right;
+    }
+
+    th:last-child {
+      text-align: right;
+    }
+
+    /* account page */
+    .account-page {
+      padding: 50px 0;
+      background: radial-gradient(#fff, #d8ffd6);
+    }
+
+    .form-container {
+      background: #ffffff;
+      width: 300px;
+      height: 400px;
+      position: relative;
+      text-align: center;
+      padding: 20px 0;
+      margin: auto;
+      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .form-container span {
+      font-weight: bold;
+      padding: 0 10px;
+      color: #555555;
+      cursor: pointer;
+      width: 100px;
+      display: inline-block;
+    }
+
+    .form-btn {
+      display: inline-block;
+    }
+
+    .form-container form {
+      max-width: 300px;
+      padding: 0 20px;
+      position: absolute;
+      top: 130px;
+      transition: transform 1s;
+    }
+
+    form input {
+      width: 100%;
+      height: 30px;
+      margin: 10px 0;
+      padding: 0 10px;
+      border: 1px solid #ccc;
+    }
+
+    form .btn {
+      width: 100%;
+      border: none;
+      cursor: pointer;
+      margin: 10px 0;
+    }
+
+    form .btn:focus {
+      outline: none;
+    }
+
+    #LoginForm {
+      left: -300px;
+    }
+
+    #RegForm {
+      left: 0;
+    }
+
+    form a {
+      font-size: 12px;
+    }
+
+    #Indicator {
+      width: 100px;
+      border: none;
+      background: #ff523b;
+      height: 3px;
+      margin-top: 8px;
+      transform: translateX(100px);
+      transition: transform 1s;
+    }
+
+    /* media query for less than 600 screen size */
+
+    @media only screen and (max-width: 600px) {
+      .row {
+        text-align: center;
+      }
+
+      .col-2,
+      .col-3,
+      .col-4 {
+        flex-basis: 50%;
+      }
+
+      .single-product .row {
+        text-align: left;
+      }
+
+      .single-product .col-2 {
+        padding: 20px 0;
+      }
+
+      .single-product h1 {
+        font-size: 26px;
+        line-height: 32px;
+      }
+
+      .cart-info p {
+        display: none;
+      }
+    }
+
+    li.dropdown {
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #d8ffd6;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #b7b4b4;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .social-icons {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .social-icons li {
+      display: inline-block;
+      /* or use 'inline' */
+      margin-right: 10px;
+      /* adjust the spacing between icons */
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+      /* Adjust the spacing between items */
+    }
+
+    .blog {
+      position: relative;
+      /* Make the parent container position relative */
+      width: 70%;
+      height: 400px;
+      margin-bottom: 20px;
+      margin-left: 15%;
+      margin-right: 20%;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .card {
+      max-width: 300px;
+      border-radius: 0.5rem;
+      background-color: #fff;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      border: 1px solid transparent;
+    }
+
+    .card a {
+      text-decoration: none
+    }
+
+    .content {
+      padding: 1.1rem;
+    }
+
+    .image {
+      object-fit: cover;
+      width: 100%;
+      height: 150px;
+    }
+
+    .img1 {
+      object-fit: cover;
+      width: 100%;
+      height: 150px;
+      border-radius: 12px;
+    }
+
+    .heading {
+      color: #111827;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      font-weight: 600;
+    }
+
+    .desc {
+      margin-top: 0.5rem;
+      color: #6B7280;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+
+    .action {
+      display: inline-flex;
+      margin-top: 1rem;
+      color: #ffffff;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      font-weight: 500;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+
+    .action span {
+      transition: .3s ease;
+    }
+
+    .action:hover span {
+      transform: translateX(4px);
+    }
+
+    .footer-col-6 {
+      width: 50%;
+      margin-left: -300px;
+      box-sizing: border-box;
+    }
+
+    .footer-row {
+      display: flex;
+      width: 0%;
+      clear: both;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <div class="header">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="logo.png" alt="classic" width="250px" /></a>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+          &#9776; <!-- Hamburger icon -->
+        </div>
+        <nav>
+          <ul id="MenuItems">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product_1.html">Products</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">
+        <h1>
+          VESTIGE PRIME ABSORVIT VITAMIN C SUBLINGUAL SPRAY
+        </h1>
+        <p style="margin-left: 30px; text-align: justify;">
+          An innovative dosage (Sublingual Spray) form which upgrades the conventional way of taking vitamins. Vestige
+          Prime Absorvit Vitamin C Sublingual Spray helps in faster absorption of nutrients in the blood stream. It
+          has better compliance for those who have swallowing issues.<br />It acts as an antioxidant by preventing
+          cell
+          damage from free radicals. It supports immunity and protects the body from infections like cold & cough. It
+          helps in maintaining healthy skin, blood vessels, bones and cartilage. Dose: Just 3 sprays a day
+        </p>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn" style="margin-left: 30px;">Explore Now →</a>
+      </div>
+      <div class="col-2">
+        <img src="img1.png" alt="" style="filter: drop-shadow(0px 0px 10px #000); width: 500px; height: 600px;" />
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- Featured categories -->
+  <h2 class="title">Videos</h2>
+  <div class="categories">
+    <div class="small-container">
+      <div class="row">
+        <iframe width="30%" height="auto" src="https://www.youtube.com/embed/WHOeR06Oox8?si=ipRawB_EfUue9CYD"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+        <iframe width="30%" height="auto" src="https://www.youtube.com/embed/WHOeR06Oox8?si=ipRawB_EfUue9CYD"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+        <iframe width="30%" height="auto" src="https://www.youtube.com/embed/WHOeR06Oox8?si=ipRawB_EfUue9CYD"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+        <iframe width="30%" height="auto" style="margin-top: 20px;"
+          src="https://www.youtube.com/embed/WHOeR06Oox8?si=ipRawB_EfUue9CYD" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Featured products -->
+  <div class="small-container">
+    <h2 class="title">Featured Products</h2>
+    <div class="row">
+      <div class="col-4">
+        <a href="product_details.html"><img src="img1.png" alt="" /></a>
+        <h3 style="font-weight: lighter; color: #000; text-decoration:none;font-size: 16px;">VESTIGE PRIME ABSORVIT VITAMIN C
+          SUBLINGUAL SPRAY</h3><br>
+        <h4 style="font-size: 16px;">MRP ₹560.00 incl. of all taxes</h4><br>
+        <h5 style="font-size: 16px;">Net Content : 22 ml</h5>
+
+      </div>
+
+      <div class="col-4">
+        <a href="product_details.html"><img src="img2.png" alt="" /></a>
+
+        <h3 style="font-weight: lighter;color: #000; text-decoration:none;font-size: 16px;">VESTIGE PRIME CONCENTRATED MINERAL DROPS
+        </h3><br>
+        <h4 style="font-size: 16px;">MRP ₹1100.00 incl. of all taxes</h4><br>
+        <h5 style="font-size: 16px;">Net Content : 60 ml</h5>
+
+      </div>
+
+      <div class="col-4">
+        <a href="product_details.html"><img src="img3.png" alt="" /></a>
+
+        <h3 style="font-weight: lighter;color: #000; text-decoration:none;font-size: 16px;">VESTIGE PRIME ABSORVIT VITAMIN D
+          SUBLINGUAL SPRAY</h3><br>
+        <h4 style="font-size: 16px;">MRP ₹560.00 incl. of all taxes</h4><br>
+        <h5 style="font-size: 16px;"> Net Content : 9 ml</h5>
+
+      </div>
+
+      <div class="col-4">
+        <a href="product_details.html"><img src="img4.png" alt="" /></a>
+        <h3 style="font-weight: lighter;color: #000; text-decoration:none;font-size: 16px;">VESTIGE DETOX FOOT PATCHES</h3><br>
+        <h4 style="font-size: 16px;">MRP ₹1400.00 incl. of all taxes</h4><br>
+        <h5 style="font-size: 16px;"> Net Content : 10 pieces</h5>
+      </div>
+
+    </div>
+
+    <h2 class="title">Latest Products</h2>
+    <div class="row">
+      <div class="col-4">
+        <img src="img2.png" alt="" />
+        <h4 style="font-size: 16px;">VESTIGE PRIME CONCENTRATED MINERAL DROPS</h4>
+        <p>MRP ₹1100.00 incl. of all taxes</p>
+      </div>
+
+      <div class="col-4">
+        <img src="img5.png" alt="" />
+        <h4 style="font-size: 16px;">INVIGO HEALTH DROPS PANCH TULSI ARK</h4>
+        <p>MRP ₹210.00 incl. of all taxes</p>
+      </div>
+
+      <div class="col-4">
+        <img src="img6.png" alt="" />
+        <h4 style="font-size: 16px;">INVIGO FRESHNUP DRINK</h4>
+        <p>MRP ₹235.00 incl. of all taxes</p>
+      </div>
+
+
+    </div>
+  </div>
+  
+  <h2 class="title">Latest Blog</h2>
+  <div class="blog">
+    <div class="row">
+      <div class="card">
+        <div class="image">
+          <img class="img1" src="agri.jpg">
+        </div>
+        <div class="content">
+          <a href="#">
+            <span class="heading">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </span>
+          </a>
+
+          <p class="desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
+            dolores, possimus pariatur animi temporibus nesciunt praesentium
+          </p>
+
+          <a class="action" href="#">
+            Find out more
+            <span aria-hidden="true">
+              →
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img class="img1" src="product.jpg">
+        </div>
+        <div class="content">
+          <a href="#">
+            <span class="heading">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </span>
+          </a>
+
+          <p class="desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
+            dolores, possimus pariatur animi temporibus nesciunt praesentium
+          </p>
+
+          <a class="action" href="#">
+            Find out more
+            <span aria-hidden="true">
+              →
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img class="img1" src="img5.png">
+        </div>
+        <div class="content">
+          <a href="#">
+            <span class="heading">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </span>
+          </a>
+
+          <p class="desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
+            dolores, possimus pariatur animi temporibus nesciunt praesentium
+          </p>
+
+          <a class="action" href="#">
+            Find out more
+            <span aria-hidden="true">
+              →
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+<br>
+<br>
+<br>
+  <footer class="footer spad">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6" style="margin-left: -100px;">
+          <div class="footer__about">
+            <div class="footer__about__logo">
+              <a href="./index.html"><img src="logo.png" alt=""></a>
+            </div>
+            <ul>
+              <li>Address: VESTIGE BO DLCP Pandharpur. Lad nagar, behind Kandre's Fitness Hub, Isbavi,
+                Pandharpur, Maharashtra 413304</li>
+              <li>Phone: +91 7420998608</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+          <div class="footer__widget" style="margin-left: -200px;">
+            <h6>Useful Links</h6>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Product</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="footer__widget" style="margin-left: -150px;">
+              <h6>Follow us on</h6>
+              <div class="footer__widget__social">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-row">
+          <div class="footer-col-6">
+            <div style="width:400px; height: 350px; position: relative;"> <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10125.01371262565!2d75.30545811010865!3d17.68006083457984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc4173e86433fcf%3A0xc7db0353a060c8d2!2sVESTIGE%20BO%20DLCP%20Pandharpur!5e0!3m2!1sen!2sin!4v1703689303965!5m2!1sen!2sin"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" style="position: absolute; top: 0; right: 0;"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="footer__copyright">
+              <div class="footer__copyright__text">
+                <p>
+                  Copyright &copy;
+                  <script>document.write(new Date().getFullYear());</script> All rights reserved |
+                  This
+                  template is made by
+                  <a href="https://colorlib.com" target="_blank">Classic Solutions</a>
+                 
+                </p>
+              </div>
+              <div class="footer__copyright__payment"><img src="img/payment-item.png" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </footer>
+
+
+  <script>
+    function toggleMenu() {
+      var nav = document.querySelector('nav');
+      nav.classList.toggle('show');
+    }
+  </script>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.nice-select.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.slicknav.js"></script>
+  <script src="js/mixitup.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translate English to Marathi</title>
+    <script>
+        function translateText() {
+            // Replace 'YOUR_API_KEY' with your actual API key or provide the path to your service account key JSON file
+            var apiKeyOrPath = 'YOUR_API_KEY';
+
+            var textToTranslate = document.getElementById('inputText').value;
+
+            // Make an API request
+            fetch(`https://translation.googleapis.com/language/translate/v2?key=${apiKeyOrPath}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                },
+                body: JSON.stringify({
+                    q: textToTranslate,
+                    source: 'en',
+                    target: 'mr',
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                var translatedText = data.data.translations[0].translatedText;
+                document.getElementById('outputText').textContent = translatedText;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Translate English to Marathi</h1>
+
+    <textarea id="inputText" placeholder="Enter English text to translate"></textarea>
+    <button onclick="translateText()">Translate</button>
+
+    <h2>Translated Text:</h2>
+    <p id="outputText"></p>
+</body>
+</html>
